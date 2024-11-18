@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+<h:head>
+    <title>Стартовая страница</title>
+    <style type="text/css">
+        body {
+            background-color: #1c1c1c;
+            color: #000;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            border: 2px solid rgba(255, 255, 255, 0);
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+        .time {
+            position: relative;
+            padding-bottom: 30px;
+            font-size: 16px;
+            right: 40px;
+        }
+        h1, h2 {
+            margin: 10px;
+        }
+        h1 {
+            font-size: 24px;
+        }
+        h2 {
+            font-size: 18px;
+        }
+        .buttons-container {
+            position: relative;
+            padding-top: 30px;
+        }
+        .mybutton {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #fff;
+            color: #333;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        .mybutton:hover {
+            background-color: #ddd;
+        }
+    </style>
+    <h:outputScript library="js" name="clock.js" />
+</h:head>
+<h:body>
+    <div class="container">
+        <div class="time" id="form:currentTime">
+            <!-- Время будет обновляться здесь -->
+        </div>
+        <header>
+            <h1>Васильев Артём</h1>
+            <h2>P3219, Вариант 19371</h2>
+        </header>
+        <h:form id="form" class="buttons-container">
+            <h:commandLink value="Тык" styleClass="mybutton" action="main" id="go-to-main-button"/>
+        </h:form>
+    </div>
+</h:body>
+</html>
